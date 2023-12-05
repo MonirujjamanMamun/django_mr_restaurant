@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% load static %} {% block item %}
+<div class="container mx-auto card my-3 border-0">
+  <div class="row g-0 align-items-center">
+    <div class="col-md-6">
+      <div class="card-body">
+        <h5 class="card-title">History</h5>
+        <h1 class="card-title">About Us</h1>
+        <h4>Welcome to MR Restaurant with a focus on premium food tastes.</h4>
+        <p class="card-text">
+          We invite you to join us at MR Restaurant and embark on a culinary
+          journey filled with flavors, warmth, and hospitality. Whether you're a
+          longtime regular or a first-time visitor, we look forward to serving
+          you and creating moments to savor.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img width="500px" src="{% static "img/dish.jpg" %}" class="img-fluid
+      rounded-start" alt="Banar Img" />
+    </div>
+  </div>
+</div>
+{% endblock item %}

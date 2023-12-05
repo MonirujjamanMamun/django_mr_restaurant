@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block css %} <link rel="stylesheet" href="{% static
+"css/main.css" %}"> {% endblock css %} {% block item %}
+<h1 class="text-center my-3">All food Items</h1>
+<div class="container mx-auto my-3 row row-cols-1 row-cols-md-3 g-4">
+  {% for meal in allMeal.categories %}
+  <div class="col">
+    <div class="card h-100">
+      <img
+        src="{{ meal.strCategoryThumb }}"
+        class="card-img-top"
+        alt="{{ meal.strCategory }}"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ meal.idCategory }}</h5>
+        <h5 class="card-title">{{ meal.strCategory }}</h5>
+        <p class="card-text">
+          {{ meal.strCategoryDescription|truncatewords:10 }}
+        </p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock item %}
